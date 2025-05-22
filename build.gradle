@@ -9,6 +9,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.cs.testplugin:Plugin:0.0.1'
+        classpath 'com.demo.testplugin:Plugin:0.0.1'
     }
 }
 plugins {

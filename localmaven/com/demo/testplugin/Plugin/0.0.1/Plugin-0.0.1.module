@@ -1,0 +1,117 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.demo.testplugin",
+    "module": "Plugin",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "Plugin-0.0.1.jar",
+          "url": "Plugin-0.0.1.jar",
+          "size": 3293,
+          "sha512": "4c5f8a0d955653f6c3b4d3deb8fb71d396703c1cfa3d44dce1578308baf65af1280d4d506b15dd565644dcbef503df482e3b9508e94c436226f977981d14afe5",
+          "sha256": "e9a80d18d028a92623ce7bfefbc461daf2916ef8582914370857fb35fa77724e",
+          "sha1": "7cc2fd84778cc9f8efdd2d7fce522eec1106f159",
+          "md5": "969a175c14922eb0103667dcac25c6d4"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "7.4.2"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle-api",
+          "version": {
+            "requires": "7.4.2"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm",
+          "version": {
+            "requires": "9.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-util",
+          "version": {
+            "requires": "9.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "Plugin-0.0.1.jar",
+          "url": "Plugin-0.0.1.jar",
+          "size": 3293,
+          "sha512": "4c5f8a0d955653f6c3b4d3deb8fb71d396703c1cfa3d44dce1578308baf65af1280d4d506b15dd565644dcbef503df482e3b9508e94c436226f977981d14afe5",
+          "sha256": "e9a80d18d028a92623ce7bfefbc461daf2916ef8582914370857fb35fa77724e",
+          "sha1": "7cc2fd84778cc9f8efdd2d7fce522eec1106f159",
+          "md5": "969a175c14922eb0103667dcac25c6d4"
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'TestPlugin'
+    id 'DemoPlugin'
 }
 
 //apply plugins: GreetingPlugin
@@ -57,6 +58,9 @@ TestPluginNew {
     logTag = 'Plugin-new'
 }
 
+Greeting.message = "Hello from the GreetingPlugin new"
+
+
 class GreetingPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
@@ -68,4 +72,4 @@ class GreetingPlugin implements Plugin<Project> {
     }
 }
 
-apply plugin: GreetingPlugin
+//apply plugin: GreetingPlugin
