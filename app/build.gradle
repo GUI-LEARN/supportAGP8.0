@@ -1,8 +1,12 @@
+
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'TestPlugin'
 }
+
+//apply plugins: GreetingPlugin
 
 android {
     compileSdk 32
@@ -52,3 +56,16 @@ TestPluginNew {
     includeMethods = ["test"]
     logTag = 'Plugin-new'
 }
+
+class GreetingPlugin implements Plugin<Project> {
+    @Override
+    void apply(Project project) {
+        project.task('hello') {
+            doLast {
+                println 'Hello from the GreetingPlugin'
+            }
+        }
+    }
+}
+
+apply plugin: GreetingPlugin
