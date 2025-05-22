@@ -24,4 +24,3 @@ dependencyResolutionManagement {
 rootProject.name = "supportAGP8.0"
 include ':app'
 include ':plugin'
-include ':demo'
