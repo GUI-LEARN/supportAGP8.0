@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'kotlin'
+    id 'maven-publish'
+}
+
+dependencies {
+    //gradle sdk
+    implementation gradleApi()
+    //groovy sdk
+    implementation localGroovy()
+    implementation 'com.android.tools.build:gradle:3.2.1'
+    implementation 'com.android.tools.build:gradle-api:3.2.1'
+    implementation 'org.ow2.asm:asm:5.1'
+    implementation 'org.ow2.asm:asm-util:5.1'
+    implementation 'org.ow2.asm:asm-commons:5.1'
+}
+
+publishing {
+    repositories { RepositoryHandler handler ->
+        handler.maven { MavenArtifactRepository mavenArtifactRepository -> //正式仓库
+            url '..\\localmaven'
+            allowInsecureProtocol = true
+            if (url.toString().startsWith("http")) {
+                credentials {
+                    username = ''
+                    password = ''
+                }
+            }
+        }
+    }
+
+    publications { PublicationContainer publication ->
+        maven(MavenPublication) {
+            version '0.0.1'
+            artifactId 'Plugin'
+            groupId 'com.demo.sampleplugin'
+            from components.java
+        }
+    }
+}

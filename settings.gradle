@@ -25,3 +25,4 @@ rootProject.name = "supportAGP8.0"
 include ':app'
 include ':plugin'
 include ':demoplugin'
+include ':sampleplugin'
